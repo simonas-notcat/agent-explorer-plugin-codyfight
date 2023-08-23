@@ -1,0 +1,36 @@
+{
+	"name": "agent-explorer-plugin-codyfight",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "node build.mjs",
+		"serve": "http-server --cors -c-1 -o -p 8080 ./dist",
+		"ngrok": "ngrok http 8080"
+	},
+	"devDependencies": {
+		"@ant-design/icons": "^5.2.5",
+		"@ant-design/pro-components": "^2.6.12",
+		"@types/react": "^18.2.20",
+		"@types/react-router-dom": "^5.3.3",
+		"@veramo-community/react-components": "^1.4.0",
+		"@veramo-community/veramo-react": "^1.0.82",
+		"@veramo/core": "^5.4.1",
+		"@veramo/core-types": "^5.4.1",
+		"@veramo/credential-w3c": "^5.4.1",
+		"@veramo/did-discovery": "^5.4.1",
+		"@veramo/selective-disclosure": "^5.4.1",
+		"@xstate/react": "^3.2.2",
+		"antd": "^5.8.3",
+		"axios": "^1.4.0",
+		"date-fns": "^2.30.0",
+		"esbuild": "^0.19.2",
+		"esbuild-plugin-external-global": "^1.0.1",
+		"http-server": "^14.1.1",
+		"pixi.js": "^7.2.4",
+		"react": "^18.2.0",
+		"react-query": "^3.39.3",
+		"react-router-dom": "^6.15.0",
+		"typescript": "^5.1.6",
+		"xstate": "^4.38.2"
+	}
+}
