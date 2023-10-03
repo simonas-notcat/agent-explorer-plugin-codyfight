@@ -47,7 +47,6 @@ export const PixiApp: React.FC<Props> = ({width, height, game, tileSize, actions
           sprite.width = tileSize
           sprite.height = tileSize
           sprite.alpha = i === 0 ? 1 : 0.5
-          console.log('sprite', sprite)
           actionSprites.push(sprite)
           app.stage.addChild(sprite)
         })

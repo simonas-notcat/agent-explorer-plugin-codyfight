@@ -12,7 +12,7 @@ import { getAllStrategies } from './strategies'
 import { stateMachine, services } from './lib/codyfight-game-client/src/state-machine'
 import { GameInfo } from './GameInfo';
 import { GameStage } from './GameStage';
-import { getIssuerDID } from './utils/did';
+import { getIssuerDID } from '@veramo-community/agent-explorer-plugin';
 
 const Operator = () => {
   const { id } = useParams<{ id: string }>()
@@ -48,7 +48,6 @@ const Operator = () => {
     const action = strategy.actions[0]    
 
     const callback = async (newGameState: GameState) => {
-      console.log('callback', newGameState)
       if (credential) {
         const actionCredential = await agent?.createVerifiableCredential({
           credential: {
@@ -69,7 +68,6 @@ const Operator = () => {
         await agent?.dataStoreSaveVerifiableCredential({
           verifiableCredential: actionCredential,
         })
-        console.log('actionCredential saved', actionCredential)
       }
     }
 
@@ -130,7 +128,7 @@ const Operator = () => {
     </Row>
     <Row style={{height: 'calc(100vh - 200px)'}}>
       <Col sm={24} lg={spectate ? 12 : 24}>
-        {!!game && <GameStage 
+        {!!game && game.map.length > 0 && <GameStage 
           game={game}
           selectedStrategyIndex={selectedStrategyIndex}
           strategies={strategies} />}

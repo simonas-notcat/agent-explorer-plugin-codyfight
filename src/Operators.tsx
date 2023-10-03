@@ -1,22 +1,17 @@
 import React, { useState } from 'react'
-import { formatRelative } from 'date-fns'
 import { useNavigate } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import { useVeramo } from '@veramo-community/veramo-react'
-import { PageContainer, ProList } from '@ant-design/pro-components'
-import { ICredentialIssuer, IDataStore, IDataStoreORM, UniqueVerifiableCredential } from '@veramo/core'
-import { EllipsisOutlined } from '@ant-design/icons'
-import IdentifierProfile from './shared/IdentifierProfile'
-import { getIssuerDID } from './utils/did'
-import CredentialActionsDropdown from './shared/CredentialActionsDropdown'
-import { Button, notification } from 'antd'
+import { PageContainer} from '@ant-design/pro-components'
+import { ICredentialIssuer, IDataStore, IDataStoreORM } from '@veramo/core'
+import { VerifiableCredentialComponent } from '@veramo-community/agent-explorer-plugin'
+import { Button, List, notification } from 'antd'
 import { RobotOutlined } from '@ant-design/icons'
 import NewOperatorModalForm, {
   NewOperatorModalValues,
 } from './NewOperatorModalForm'
 import { GameAPI } from './lib/codyfight-game-client/src/GameApi'
 import { createOperatorCredential, createProfileCredential } from './utils/credentials'
-import { OperatorSummary } from './OperatorSummary'
 
 
 const Operators = () => {
@@ -104,52 +99,13 @@ const Operators = () => {
       />,
     ]}
     >
-      <ProList
-        ghost
-        loading={isLoading}
-        pagination={{
-          defaultPageSize: 20,
-          showSizeChanger: true,
-        }}
-        grid={{ column: 1, lg: 2, xxl: 2, xl: 2 }}
-        onItem={(record: any) => {
-          return {
-            onClick: (a) => {
-              navigate('/codyfight/operator/' + record.hash)
-            },
-          }
-        }}
-        metas={{
-          title: {},
-          content: {},
-          actions: {
-            cardActionProps: 'extra',
-          },
-        }}
-        dataSource={credentials?.map((item: UniqueVerifiableCredential) => {
-          return {
-            title: (
-              <IdentifierProfile
-                did={getIssuerDID(item.verifiableCredential)}
-              />
-            ),
-            actions: [
-              <div>
-                {formatRelative(
-                  new Date(item.verifiableCredential.issuanceDate),
-                  new Date(),
-                )}
-              </div>,
-              <CredentialActionsDropdown credential={item.verifiableCredential}>
-                <EllipsisOutlined />
-              </CredentialActionsDropdown>,
-            ],
-            content: (<OperatorSummary credential={item.verifiableCredential} />
-            ),
-            hash: item.hash,
-            verifiableCredential: item.verifiableCredential,
-          }
-        })}
+      <List
+        itemLayout="vertical"
+        size="large"
+        dataSource={credentials}
+        renderItem={(item) => (  
+          <VerifiableCredentialComponent credential={item} />
+        )}
       />
       {agent?.availableMethods().includes('createVerifiableCredential') && (
         <NewOperatorModalForm

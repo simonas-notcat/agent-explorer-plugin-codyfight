@@ -21,7 +21,6 @@ export const OperatorSummary: React.FC<{
     }
   }, [credential, send])
 
-  console.log({game, error})
   if (!agent || !credential) return null
   return (
     <>
