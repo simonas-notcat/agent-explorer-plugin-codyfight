@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useMachine } from '@xstate/react';
 import { useVeramo } from '@veramo-community/veramo-react'
-import '@veramo-community/react-components/dist/cjs/index.css'
 import { IDIDManager, IDataStore, IDataStoreORM, VerifiableCredential } from '@veramo/core-types'
 import { Alert, Col, Row } from 'antd'
 import { stateMachine, services } from './lib/codyfight-game-client/src/state-machine'

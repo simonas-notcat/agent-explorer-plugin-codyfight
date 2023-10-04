@@ -20,27 +20,18 @@ devDependencies:
   '@veramo-community/agent-explorer-plugin':
     specifier: ^1.44.0
     version: 1.44.0(rc-field-form@1.36.2)(react-native@0.72.4)
-  '@veramo-community/react-components':
-    specifier: ^1.4.0
-    version: 1.4.0(react@18.2.0)
   '@veramo-community/veramo-react':
     specifier: ^1.0.82
-    version: 1.0.82(@veramo/core@5.4.1)(react@18.2.0)
+    version: 1.0.82(@veramo/core@5.5.2-next.11)(react@18.2.0)
   '@veramo/core':
-    specifier: ^5.4.1
-    version: 5.4.1
+    specifier: 5.5.2-next.11
+    version: 5.5.2-next.11
   '@veramo/core-types':
-    specifier: ^5.4.1
-    version: 5.4.1
+    specifier: 5.5.2-next.11
+    version: 5.5.2-next.11
   '@veramo/credential-w3c':
     specifier: ^5.4.1
     version: 5.4.1(expo@49.0.7)(react-native@0.72.4)
-  '@veramo/did-discovery':
-    specifier: ^5.4.1
-    version: 5.4.1
-  '@veramo/selective-disclosure':
-    specifier: ^5.4.1
-    version: 5.4.1
   '@xstate/react':
     specifier: ^3.2.2
     version: 3.2.2(@types/react@18.2.20)(react@18.2.0)(xstate@4.38.2)
@@ -4647,22 +4638,14 @@ packages:
       - typeorm-aurora-data-api-driver
     dev: true
 
-  /@veramo-community/react-components@1.4.0(react@18.2.0):
-    resolution: {integrity: sha512-DlOTlu6w5uOsd9nACXCwV2Whae9aUDtHuUJ1+LNyO0x1fSK60JjJ1DowVf0vDhiN1GS44O978OZc7vziK3ulYA==}
-    peerDependencies:
-      react: ^18.2.0
-    dependencies:
-      react: 18.2.0
-    dev: true
-
-  /@veramo-community/veramo-react@1.0.82(@veramo/core@5.4.1)(react@18.2.0):
+  /@veramo-community/veramo-react@1.0.82(@veramo/core@5.5.2-next.11)(react@18.2.0):
     resolution: {integrity: sha512-K/TOWUZw4wiJrb+JUdQZ6uW7FVOBSABK0UiT+qDaSdrLRiztNxLdd05tGdoPFKsxt+DIOeHM35uFxBXtts/IPw==}
     peerDependencies:
       '@veramo/core': 5.1.5-next.13
       '@veramo/remote-client': 5.1.5-next.13
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@veramo/core': 5.4.1
+      '@veramo/core': 5.5.2-next.11
       react: 18.2.0
       ts-jest-resolver: 2.0.1
       uuid: 9.0.0
@@ -4690,8 +4673,8 @@ packages:
       - supports-color
     dev: true
 
-  /@veramo/core-types@5.5.2-next.10:
-    resolution: {integrity: sha512-07l+Pgyedn9Gz9UpMb/VeUq/Xx1+QwLbfffgPEEU9ELHDzDqA8592DgFyxOWhgKpLWacwVKuXX7VNsK1HVUWyw==}
+  /@veramo/core-types@5.5.2-next.11:
+    resolution: {integrity: sha512-BC/FwUR0OZ3hrf0Lc6I4wOlSleOxI4tDxk9q8oEoYKx/wM+J1YYf4VA/EC3YpI7CR+OA317N3SxG1ejrYAb2Xg==}
     dependencies:
       credential-status: 2.0.6
       debug: 4.3.4
@@ -4712,10 +4695,10 @@ packages:
       - supports-color
     dev: true
 
-  /@veramo/core@5.4.1:
-    resolution: {integrity: sha512-qmd/0lYKuxZyT3N85VrRe6XwJDRqs+NRHFbWnO9T+/G2LGu1P/VBKeHNdPaLHTK4jTyfkyXTwHc2513T1Tvfjg==}
+  /@veramo/core@5.5.2-next.11:
+    resolution: {integrity: sha512-2iHg1ZY4T/e1jlLGQY1h/bRQmTS1BXMysnXSY9v92M6O4V+K0RrPnluYL4q5zHDb4GL/YGbTPx4CmZecwdvfkw==}
     dependencies:
-      '@veramo/core-types': 5.4.1
+      '@veramo/core-types': 5.5.2-next.11
       debug: 4.3.4
       events: 3.3.0
       z-schema: 6.0.1
@@ -4726,7 +4709,7 @@ packages:
   /@veramo/core@5.5.2-next.9:
     resolution: {integrity: sha512-vMiTzkysw925ZcdGLShkOOIfaonVwUtzbnNid8WEUk+w+jceqVdaswbRqqpQRwQPT1rVQ+PUD8llUppNNAIfvA==}
     dependencies:
-      '@veramo/core-types': 5.5.2-next.9
+      '@veramo/core-types': 5.5.2-next.11
       debug: 4.3.4
       events: 3.3.0
       z-schema: 6.0.1
@@ -4788,7 +4771,7 @@ packages:
   /@veramo/data-store@5.5.2-next.9:
     resolution: {integrity: sha512-xxp2AwNJjKG8Le0k5Di5OxOAC97e34r0RCaeaGuqbuDNvzVyf075rF9xVubT9pTc3RDIEeOMDG0Fn9sCHLLjMQ==}
     dependencies:
-      '@veramo/core-types': 5.5.2-next.9
+      '@veramo/core-types': 5.5.2-next.11
       '@veramo/did-discovery': 5.5.2-next.10
       '@veramo/did-manager': 5.5.2-next.10
       '@veramo/key-manager': 5.5.2-next.10
@@ -4819,19 +4802,10 @@ packages:
       - typeorm-aurora-data-api-driver
     dev: true
 
-  /@veramo/did-discovery@5.4.1:
-    resolution: {integrity: sha512-vY92DhV7Ut+FTVs0kr+c56LAXZCrUSYTCqhvLSeQUJnIBKEwF28BO4FKWnPsB+sEIu7OY05e3WdkZqdCDvVyHA==}
-    dependencies:
-      '@veramo/core-types': 5.4.1
-      debug: 4.3.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@veramo/did-discovery@5.5.2-next.10:
     resolution: {integrity: sha512-yvwZTx8hUDG0Mh4i9O7c6/Nqfhe3NHxSw79/ttXwzC3sV9qdPiLZSK1A+0OKeRg9zsTGdOYfsmzw2IEHGjGiuQ==}
     dependencies:
-      '@veramo/core-types': 5.5.2-next.10
+      '@veramo/core-types': 5.5.2-next.11
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
@@ -4840,7 +4814,7 @@ packages:
   /@veramo/did-manager@5.5.2-next.10:
     resolution: {integrity: sha512-+UvvOd/vkOSiTTiZHnYdYh/mfKPnt3cwqWdXk2XbCBth2M6nzFhGN3MvWb2XlFTRwdcvaHNTJvP/IRxZ1m5c5Q==}
     dependencies:
-      '@veramo/core-types': 5.5.2-next.10
+      '@veramo/core-types': 5.5.2-next.11
       '@veramo/did-discovery': 5.5.2-next.10
     transitivePeerDependencies:
       - supports-color
@@ -4853,7 +4827,7 @@ packages:
       '@ethersproject/strings': 5.7.0
       '@ethersproject/transactions': 5.7.0
       '@noble/curves': 1.1.0
-      '@veramo/core-types': 5.5.2-next.10
+      '@veramo/core-types': 5.5.2-next.11
       '@veramo/utils': 5.5.2-next.10
       debug: 4.3.4
       did-jwt: 7.4.1
@@ -4870,20 +4844,6 @@ packages:
       '@veramo/core-types': 5.4.1
       debug: 4.3.4
     transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@veramo/selective-disclosure@5.4.1:
-    resolution: {integrity: sha512-FCwClFIjCcsgcLi86V7Uo/GLp7jYPAXqRslkAkg7CxBSDb6YD06aDJjDjjvnVr7dHfaVzHw/3WZwKsuZU3cg+A==}
-    dependencies:
-      '@veramo/core-types': 5.4.1
-      '@veramo/message-handler': 5.4.1
-      '@veramo/utils': 5.4.1
-      debug: 4.3.4
-      did-jwt: 7.2.5
-      uuid: 9.0.0
-    transitivePeerDependencies:
-      - encoding
       - supports-color
     dev: true
 
@@ -4915,7 +4875,7 @@ packages:
       '@ethersproject/transactions': 5.7.0
       '@ipld/dag-pb': 4.0.6
       '@noble/curves': 1.1.0
-      '@veramo/core-types': 5.5.2-next.10
+      '@veramo/core-types': 5.5.2-next.11
       credential-status: 2.0.6
       cross-fetch: 4.0.0
       debug: 4.3.4
@@ -4937,7 +4897,7 @@ packages:
       '@ethersproject/transactions': 5.7.0
       '@ipld/dag-pb': 4.0.6
       '@noble/curves': 1.1.0
-      '@veramo/core-types': 5.5.2-next.9
+      '@veramo/core-types': 5.5.2-next.11
       credential-status: 2.0.6
       cross-fetch: 4.0.0
       debug: 4.3.4
