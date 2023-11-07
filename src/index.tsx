@@ -14,6 +14,7 @@ const Plugin: IPlugin = {
         return {
           name: 'Codyfight',
           description: 'AI Bot for Codyfight.com',
+          icon: <RobotOutlined />,
           requiredMethods: [
             'dataStoreSaveVerifiableCredential',
             'createVerifiableCredential',
