@@ -93,10 +93,9 @@ const Operators = () => {
       <Button
         key={'copy'}
         icon={<RobotOutlined />}
-        type="text"
-        title="New Game"
+        type="primary"
         onClick={() => setIsNewOperatorModalVisible(true)}
-      />,
+      >New Operator</Button>,
     ]}
     >
       <List
